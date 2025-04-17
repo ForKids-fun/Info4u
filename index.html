@@ -11,6 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World Problems - News Articles</title>
+    
     <style>
         /* General Styles */
         body {
@@ -28,29 +29,34 @@
             margin-top: 20px;
         }
 
-        h2 {
-            color: #2d4f7c;
-            font-size: 2em;
-            margin-top: 30px;
-            text-align: center;
-        }
-
-        /* Section Styles */
-        section {
+        /* Section Styles for each article (box) */
+        .article-box {
             background-color: #ffffff;
             padding: 20px;
             margin: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #333;
         }
 
-        /* Different Background Colors for Sections */
-        section:nth-child(odd) {
+        /* Box Color Alternating */
+        .article-box:nth-child(odd) {
             background-color: #ffefba;
         }
 
-        section:nth-child(even) {
+        .article-box:nth-child(even) {
             background-color: #d1f0f6;
+        }
+
+        /* Header for each section */
+        h2 {
+            color: #2d4f7c;
+            font-size: 2em;
+            margin-top: 30px;
+            text-align: center;
+            border-bottom: 3px solid #2d4f7c;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
         }
 
         /* Paragraph Styles */
@@ -63,20 +69,24 @@
 
         /* Section Borders */
         section h2 {
-            border-bottom: 3px solid #2d4f7c;
-            padding-bottom: 5px;
             margin-bottom: 15px;
         }
 
-        /* Box Shadow on Sections */
-        section {
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
         /* Hover Effects */
-        section:hover {
+        .article-box:hover {
             transform: scale(1.02);
             transition: all 0.3s ease;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d4f7c;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
 
         /* Responsive Design */
@@ -98,16 +108,6 @@
             }
         }
 
-        /* Footer */
-        footer {
-            background-color: #2d4f7c;
-            color: #ffffff;
-            text-align: center;
-            padding: 15px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
     </style>
 </head>
 <body>
